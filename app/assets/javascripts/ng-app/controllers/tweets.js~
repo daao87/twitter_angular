@@ -1,0 +1,15 @@
+angular.module('AngularRails')
+    .controller('TweetsCtrl', function ($scope, $http) {
+        $scope.query = '';
+        $scope.loading = false;
+        $scope.search = function() {
+          $scope.loading = false;
+          $http.get('/twitter/index.json?search=' + $scope.query).
+             success(function(data){
+               $scope.tweets = data;
+             });
+          $scope.loading = false;
+        };
+        
+        $scope.search();
+    });

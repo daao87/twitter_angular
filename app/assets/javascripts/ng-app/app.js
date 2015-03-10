@@ -3,9 +3,8 @@ angular.module('AngularRails', [
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
         
-        $routeProvider.when('/tweets', {templateUrl: 'twitter.html', controller: 'TwitterCtrl'});
-        $routeProvider.when('/', {templateUrl: 'home.html', controller: 'HomeCtrl'});
-        $routeProvider.when('/hola', {templateUrl: 'hola.html', controller: 'HolaCtrl'});
+        $routeProvider.when('/tweets', {templateUrl: 'tweets.html', controller: 'TweetsCtrl'});
+        $routeProvider.otherwise({templateUrl: 'home.html', controller: 'HomeCtrl'});
             
         $locationProvider.html5Mode(true);
     });
