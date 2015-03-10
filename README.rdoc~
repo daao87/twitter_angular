@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Angular on Rails app that makes use of the Twitter search API with application-only OAuth.
 
-Things you may want to cover:
+How it works:
 
-* Ruby version
+* You can get the app working by going to /twitter/index. This route is set by Rails in the routes.rb. The corresponding view has a <div> with `ng-controller` pointing to the AngularJS TweetsCtrl.
 
-* System dependencies
+* You can also get the app working by going to /tweets. It works the same, but this route is handled by Angular ngRoute directive. It calls the same AngularJS TweetsCtrl mentioned above.
 
-* Configuration
+The TweetsCtrl retrieves the tweets by calling the `$http.get` method. The URL passed in is `"/twitter/index.json?search=" + searchParam"`. It works because the Rails controller renders html and json, so it works by itself but also offers a json API.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
