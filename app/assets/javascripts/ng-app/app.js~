@@ -1,7 +1,6 @@
 angular.module('AngularRails', [
         'ngRoute',
-        'templates',
-        'ngResource'
+        'templates'
     ]).config(function ($routeProvider, $locationProvider) {
         
         $routeProvider.when('/tweets', {templateUrl: 'twitter.html', controller: 'TwitterCtrl'});

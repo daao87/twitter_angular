@@ -1,0 +1,4 @@
+angular.module('AngularRails')
+    .controller('HolaCtrl', function ($scope, $http) {
+        $scope.query = "hola";
+    });
