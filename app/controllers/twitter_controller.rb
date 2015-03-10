@@ -1,0 +1,15 @@
+class TwitterController < ApplicationController
+  respond_to :json, :html
+  
+  def index
+    @search = params[:search]
+
+  	@tweets = $client.search("##{@search} -rt", lang: "es").take(10)
+  	
+  	respond_with(@tweets) do |format|  	  
+      format.html { render :index }
+      format.json { render :json => @tweets.as_json }
+    end
+  end
+  
+end

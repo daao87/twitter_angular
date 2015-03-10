@@ -1,0 +1,19 @@
+<div ng-controller="TwitterCtrl">
+  <div class="row">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text" ng-model="query" placeholder="Search..." class="form-control">
+      </div>
+      <button ng-click="search()" class="btn btn-success">Search</button>
+    </form>
+  </div>
+  <br/>
+  <div class="row">
+    <ul class="list-group">
+        <li ng-repeat="tweet in tweets" class="list-group-item">
+          <span>{{tweet.user.screen_name}}</span> | {{tweet.text}}
+        </li>
+    </ul>
+  </div>
+</div>
+
