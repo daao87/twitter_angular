@@ -5,7 +5,6 @@ angular.module('AngularRails', [
         
         $routeProvider.when('/tweets', {templateUrl: 'tweets.html', controller: 'TweetsCtrl'});
         $routeProvider.otherwise({templateUrl: 'home.html', controller: 'HomeCtrl'});
-        //$routeProvider.when('/tweets', {templateUrl: 'hola.html', controller: 'HolaCtrl'});
             
         $locationProvider.html5Mode(true);
     });
