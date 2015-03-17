@@ -49,3 +49,5 @@ gem 'angular-rails-templates'
 gem 'twitter'
 gem 'responders', '~> 2.0'
 
+gem 'bootstrap-sass'
+
